@@ -9,9 +9,9 @@ logging:
   appenders:
     - type: console
     - type: file
-      currentLogFilename: /var/log/vrms-app.log
+      currentLogFilename: /tmp/vrms-app.log
       archive: true
-      archivedLogFilenamePattern: /var/log/vrms-app-%i.log
+      archivedLogFilenamePattern: /tmp/vrms-app-%i.log
       archivedFileCount: 7
       timeZone: UTC
       maxFileSize: 10MB
@@ -23,3 +23,11 @@ mongo:
   db: iflit
   user: ajt001
   password: iflitpwd
+
+server:
+  type: simple
+  applicationContextPath: /api
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 8080
