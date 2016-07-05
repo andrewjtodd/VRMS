@@ -1,0 +1,56 @@
+db.companies.insert(
+{
+"name": "IOOF Holdings Ltd",
+"location": {
+"address1": "Level 6",
+"address2": "161 Collins Street",
+"suburb": "Melbourne",
+"postcode": "3000",
+"state": "VIC",
+"country": "Australia"
+},
+"objectives": [
+"objective" {
+"name": "Primary",
+"description": "Looking to grow business by doing xxxx",
+"date": "2016/06/21",
+"active": "true"
+},
+"objective" {
+"name": "Secondary",
+"description": "Looking to be more efficient in operating the business by doing xxxx",
+"date": "2015/06/21",
+"active": "true"
+},
+"objective" {
+"name": "Old Objective",
+"description": "Looking tog the business by doing xxxx",
+"date": "2015/06/21",
+"active": "false"
+}
+]
+})
+
+db.vendors.insert(
+{"name": "ThoughtWorks",
+"location": {
+"address1": "Level 23",
+"address2": "303 Collins Street",
+"suburb": "Melbourne",
+"postcode": "3000",
+"state": "VIC",
+"country": "Australia"
+}
+})
+
+db.vendors.insert(
+{"name": "Optus",
+"location": {
+"address1": "",
+"address2": "360 Collins Street",
+"suburb": "Melbourne",
+"postcode": "3000",
+"state": "VIC",
+"country": "Australia"
+}
+})

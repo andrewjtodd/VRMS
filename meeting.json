@@ -1,0 +1,51 @@
+{
+  "vendor_id": "KPMG",
+  "date": "20160601",
+  "name": "Weekly Update",
+  "description": "Meeting to discuss normal operational items",
+  "location": {
+    "address1": "161 Collins St",
+    "address2": "",
+    "suburb": "Melbourne",
+    "postcode": "3000",
+    "state": "VIC",
+    "country": "Australia"
+  },
+  "meetingAttendees": [
+    {
+      "vendorEmployee": {
+        "_id": "Ryan Moffat",
+        "role": "Managing Director",
+        "emailAddress": "rmoffat@thoughtworks.com",
+        "phoneNumber": "041122334",
+        "vendor_id": "ThoughtWorks"
+      }
+    },
+    {
+      "vendorEmployee": {
+        "_id": "Chelsea Bates",
+        "role": "Client Relationship Manager",
+        "emailAddress": "cbates@thoughtworks.com",
+        "phoneNumber": "04556372",
+        "vendor_id": "ThoughtWorks"
+      }
+    },
+    {
+      "employee": {
+        "_id": "Andrew Todd",
+        "role": "Chief Information Officer",
+        "emailAddress": "andrew.todd@ioof.com.au",
+        "phoneNumber": "0466772118",
+        "company_id": "IOOF Holdings Ltd"
+      },
+      "score": {
+        "scoreDate": "",
+        "score": "6.2"
+      }
+    }
+  ],
+  "score": {
+    "scoreDate": "",
+    "score": "5.9"
+  }
+}

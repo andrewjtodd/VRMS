@@ -1,0 +1,31 @@
+{
+  "name": "Optus",
+  "contact_person": "James McIntyre",
+  "health": "93",
+  "risk": "8",
+  "address": {
+    "unit": "",
+    "number": "1",
+    "street": "Lyon Park",
+    "postcode": "2055",
+    "city": "North Ryde",
+    "state": "NSW",
+    "country": "Australia"
+  },
+  "contracts": [
+    ObjectId
+    (
+    "574c0d27612f0f25aca19443"
+    ),
+    ObjectId
+    (
+    "574c0d3f612f0f25aca19444"
+    )
+  ],
+  "meetings": [
+    ObjectId
+    (
+    "574c0f60612f0f25aca19446"
+    )
+  ]
+}

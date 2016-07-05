@@ -1,0 +1,17 @@
+logging:
+  level: INFO
+  loggers:
+    io.dropwizard: INFO
+#    org.eclipse.jetty: WARN
+    org.eclipse.jetty.server.Server: INFO
+    au.com.privitar: DEBUG
+
+  appenders:
+    - type: console
+
+mongo:
+  host: localhost
+  port: 39999
+  db: iflit
+  user: ajt001
+  password: iflitpwd
