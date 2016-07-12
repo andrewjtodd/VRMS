@@ -3,11 +3,7 @@ package au.com.privitar;
 import au.com.privitar.db.MongoClientManager;
 import au.com.privitar.health.MongoHealthCheck;
 import au.com.privitar.health.VRMSHealthCheck;
-import au.com.privitar.resource.EmployeeServiceResource;
-import au.com.privitar.resource.MeetingServiceResource;
-import au.com.privitar.resource.VendorEmployeeResourceService;
-import au.com.privitar.resource.VendorServiceResource;
-import au.com.privitar.resource.VendorListServiceResource;
+import au.com.privitar.resource.*;
 import au.com.privitar.services.HealthCalculatorService;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
@@ -67,6 +63,7 @@ public class VRMSApp extends Application<VRMSConfiguration> {
         VendorServiceResource vendorServiceResource = new VendorServiceResource(database);
         VendorListServiceResource vendorListServiceResource = new VendorListServiceResource(database);
         MeetingServiceResource meetingServiceResource = new MeetingServiceResource(database);
+        MeetingListServiceResource meetingListServiceResource = new MeetingListServiceResource(database);
         EmployeeServiceResource employeeServiceResource = new EmployeeServiceResource(database);
         VendorEmployeeResourceService vendorEmployeeResourceService = new VendorEmployeeResourceService(database);
         HealthCalculatorService healthCalculatorService = new HealthCalculatorService(database);
@@ -74,6 +71,7 @@ public class VRMSApp extends Application<VRMSConfiguration> {
 
         environment.jersey().register(vendorEmployeeResourceService);
         environment.jersey().register(vendorServiceResource);
+        environment.jersey().register(meetingListServiceResource);
         environment.jersey().register(vendorListServiceResource);
         environment.jersey().register(meetingServiceResource);
         environment.jersey().register(employeeServiceResource);
