@@ -9,6 +9,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 @JsonIgnoreProperties(ignoreUnknown = true)
 class Vendor extends Company {
     public static final String COLLECTION_NAME = "vendors";
-    List<HealthScore> scores = new ArrayList<>();
-    HealthScore score = new HealthScore();
+    List<HealthScore> scores = null;
+    CurrentScore currentScore = null;
+
+    CurrentScore calculateScore(List<Meeting> meetings, List<Person> people) {
+        CurrentScore score = new CurrentScore()
+        score.scoreDate = "19/07/2016"
+        score.score = 76.5
+        return score
+    }
 }

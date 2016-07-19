@@ -8,18 +8,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
  * A score against a vendor.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-class HealthScore {
-    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
+class HealthScore extends Score {
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     Date scoreDate;
-    float score;
-
-    HealthScore() {
-        super()
-    }
 
     HealthScore(Date scoreDate, float score) {
         this.scoreDate = scoreDate
         this.score = score
+    }
+
+    HealthScore() {
+        super();
     }
 
     @Override

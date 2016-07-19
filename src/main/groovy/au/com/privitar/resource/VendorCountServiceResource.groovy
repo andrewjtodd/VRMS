@@ -5,8 +5,6 @@ import com.codahale.metrics.annotation.Timed
 import com.mongodb.DB
 import com.mongodb.DBCollection
 import org.mongojack.JacksonDBCollection
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 
 import javax.ws.rs.Consumes
 import javax.ws.rs.GET
@@ -15,25 +13,22 @@ import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 
 /**
- * Created by andrewtodd on 9/06/2016.
- * Does things related to the vendor.
+ * Created by andrewtodd on 16/07/2016.
+ * Just returns the number of vendors.
  */
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Timed
-@Path("/vendors")
-class VendorListServiceResource extends ServiceBase {
-    private static final Logger logger = LoggerFactory.getLogger(VendorListServiceResource.class);
-    VendorListServiceResource(DB database) {
-        super(database);
+@Path("vendors/count")
+class VendorCountServiceResource extends ServiceBase {
+    VendorCountServiceResource(DB database) {
+        super(database)
     }
 
     @GET
-    List<Vendor> getVendors() {
+    int getTotalVendors() {
         JacksonDBCollection<Vendor, String> jacksonDBCollection = getCollection();
-        logger.info("Items in the collection are: " + jacksonDBCollection.count());
-
-        return jacksonDBCollection.find().toArray()
+        return jacksonDBCollection.find().toArray().size()
     }
 
     JacksonDBCollection<Vendor, String> getCollection() {

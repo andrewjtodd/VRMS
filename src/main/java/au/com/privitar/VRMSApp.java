@@ -61,6 +61,8 @@ public class VRMSApp extends Application<VRMSConfiguration> {
     private void addServiceResources(Environment environment, DB database) {
         // more resources that do the end points here.
         VendorServiceResource vendorServiceResource = new VendorServiceResource(database);
+        VendorHealthServiceResource vendorHealthServiceResource = new VendorHealthServiceResource(database);
+        VendorCountServiceResource vendorCountServiceResource = new VendorCountServiceResource(database);
         VendorListServiceResource vendorListServiceResource = new VendorListServiceResource(database);
         MeetingServiceResource meetingServiceResource = new MeetingServiceResource(database);
         MeetingListServiceResource meetingListServiceResource = new MeetingListServiceResource(database);
@@ -70,6 +72,8 @@ public class VRMSApp extends Application<VRMSConfiguration> {
 
 
         environment.jersey().register(vendorEmployeeResourceService);
+        environment.jersey().register(vendorHealthServiceResource);
+        environment.jersey().register(vendorCountServiceResource);
         environment.jersey().register(vendorServiceResource);
         environment.jersey().register(meetingListServiceResource);
         environment.jersey().register(vendorListServiceResource);

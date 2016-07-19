@@ -21,6 +21,8 @@ abstract class ServiceBase {
      Simple method that checks the results of a DB write, if all OK there is no error.
      */
     def checkDBWrite(WriteResult writeResult) {
-        if (writeResult.error != null || writeResult.getSavedIds().size() == 0 || writeResult.error) throw new RuntimeException(writeResult.getError());
+
+        if (writeResult.error != null) throw new RuntimeException(writeResult.getError());
+        if (writeResult.getN() == 0 && writeResult.getSavedObject() == 0) throw new RuntimeException(writeResult.getError());
     }
 }

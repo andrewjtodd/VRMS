@@ -57,7 +57,7 @@ class VendorServiceResource extends ServiceBase {
     }
 
     JacksonDBCollection<Vendor, String> getCollection() {
-        DBCollection collection = getDatabase().getCollection("vendors");
+        DBCollection collection = getDatabase().getCollection(Vendor.COLLECTION_NAME);
         JacksonDBCollection<Vendor, String> jacksonDBCollection = JacksonDBCollection.wrap(collection, Vendor.class, String.class);
         return jacksonDBCollection;
     }

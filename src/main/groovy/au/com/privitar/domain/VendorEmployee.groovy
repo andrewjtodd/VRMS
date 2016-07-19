@@ -5,5 +5,21 @@ package au.com.privitar.domain
  * An employee of a vendor.
  */
 class VendorEmployee extends Person {
-    String vendor_id;
+    VendorEmployee() {
+        super();
+    }
+
+    public static final String COLLECTION_NAME = "vendor_employees";
+    String vendorName;
+    List<HealthScore> scores = new ArrayList<HealthScore>();
+    CurrentScore currentScore = new CurrentScore();
+
+    @Override
+    public String toString() {
+        return "VendorEmployee{" +
+                "vendorName='" + vendorName + '\'' +
+                ", scores=" + scores +
+                ", currentScore=" + currentScore +
+                '}';
+    }
 }
